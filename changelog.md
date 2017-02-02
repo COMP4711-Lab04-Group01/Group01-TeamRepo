@@ -7,6 +7,7 @@ Changelog format: Bottom to top (New to old).
 <h2>Version: </h2>
 Version | Release Date | Description  | Editor
 --- | --- | --- | ---
+*v1.5* | Feb 02, 2017 | Fixed issue #5. | `arnoldmyint`
 *v1.4* | Feb 02, 2017 | Fixed issue #4. | `Arv91`
 *v1.3* | Feb 02, 2017 | Fixed issue #3. | `jasonlee97`
 *v1.2* | Feb 02, 2017 | Fixed issue #2. | `arnoldmyint`

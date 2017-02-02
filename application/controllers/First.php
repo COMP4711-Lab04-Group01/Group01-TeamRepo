@@ -38,4 +38,17 @@ class First extends Application
 		$this->render();
 	}
 
+	/**
+	 * Show the top right author quote
+	 */
+	public function gimme($id)
+	{
+		// this is the view we want shown
+		$this->data['pagebody'] = 'justone';
+
+		// get from the parameter
+	    $record = $this->quotes->get($id);
+	    $this->data = array_merge($this->data, $record);
+		$this->render();
+	}
 }
