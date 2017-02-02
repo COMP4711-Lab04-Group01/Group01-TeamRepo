@@ -30,4 +30,17 @@ class Welcome extends Application
 		$this->render();
 	}
 
+	/**
+	 * Show the top middle author quote
+	 */
+	public function shucks()
+	{
+		// this is the view we want shown
+		$this->data['pagebody'] = 'justone';
+ 
+		// build the middle top authors, to pass on to our view
+                $record = $this->quotes->topMiddle();
+                $this->data = array_merge($this->data, $record);
+		$this->render();
+	}
 }
