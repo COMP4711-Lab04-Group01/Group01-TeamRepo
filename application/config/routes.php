@@ -66,4 +66,5 @@ $route['dunno'] = function() {
 	die(); // and we don't have to go any further
 };
 $route['([a-zA-Z]{4})/bingo'] = 'bingo';
+$route['comp(\d{4})/.*'] = "wise/bingo";
 
