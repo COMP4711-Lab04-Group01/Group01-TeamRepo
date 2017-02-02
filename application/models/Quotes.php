@@ -47,4 +47,27 @@ class Quotes extends CI_Model {
 		return $this->data;
 	}
 
+	// retrieve the first quotes
+	public function first()
+	{
+		return $this->data[0];
+	}	
+
+	// retrieve the last quote
+	public function last()
+	{
+	    // move pointer to the last of data array
+	    end($this->data);
+	    
+	    // get the index of the current pointer
+	    $last_index = key($this->data);
+	    
+	    return $this->data[$last_index];
+	}
+
+	// retrieve top middle quote
+	public function topMiddle()
+	{
+		return $this->data[1];
+	}
 }
