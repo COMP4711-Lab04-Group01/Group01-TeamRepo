@@ -53,4 +53,15 @@ class Quotes extends CI_Model {
 		return $this->data[0];
 	}	
 
+	// retrieve the last quote
+	public function last()
+	{
+	    // move pointer to the last of data array
+	    end($this->data);
+	    
+	    // get the index of the current pointer
+	    $last_index = key($this->data);
+	    
+	    return $this->data[$last_index];
+	}
 }
