@@ -43,4 +43,22 @@ class Hogwarts extends Application
                 $this->data = array_merge($this->data, $record);
 		$this->render();
 	}
+
+	/**
+     * Show a random quote for invalid URL
+     */
+    public function random()
+    {
+        // this is the view we want shown
+        $this->data['pagebody'] = 'justone';
+        // build the list of authors, to pass on to our view
+        $source = $this->quotes->all();
+        $authors = array ();
+        //get random record
+        $count = count($source);
+        $index = rand(0, $count-1);
+        $record = $source[$index];
+        $this->data = array_merge($this->data, $record);
+        $this->render();
+    }
 }
