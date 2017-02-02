@@ -27,4 +27,15 @@ class First extends Application
 		$this->render();
 	}
 
+	/**
+	 * Show the top left author quote
+	 */
+	public function zzz()
+	{
+		$this->data['pagebody'] = 'justone';
+		$record = $this->quotes->first();
+		$this->data = array_merge($this->data, $record);
+		$this->render();
+	}
+
 }
